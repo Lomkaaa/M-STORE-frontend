@@ -1,0 +1,93 @@
+/* Основные стили для header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* Для прижатия элементов */
+}
+.nav {
+  display: flex;
+  gap: 30px;
+  
+}
+.nav a {
+  color: inherit
+}
+
+
+/* Логотип */
+.logoImage {
+  height: 80px;
+  width: auto;
+  transition: height 0.3s ease; /* Плавное изменение размера */
+}
+
+/* Поле поиска */
+.search {
+  height: 30px; 
+  width: 100%;
+  max-width: 350px; 
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 20px; 
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+/* Эффект при фокусе */
+.search:focus {
+  border-color: #3f4041;
+  box-shadow: 0 0 5px rgba(2, 2, 2, 0.5);
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Изменяем направление на колонку, чтобы элементы выстраивались вертикально */
+    gap: 10px; /* Меньший промежуток между элементами */
+  }
+
+  .logoImage {
+    height: 35px; /* Уменьшаем размер логотипа */
+    margin-bottom: 10px; /* Отступ снизу для логотипа */
+  }
+
+  /* Поиск на мобильных */
+  .search {
+    margin-top: 10px;
+    height: 20px; /* Увеличиваем высоту поля поиска */
+    max-width: 100%; /* Поиск растягивается на всю ширину экрана */
+    font-size: 18px; /* Увеличиваем шрифт */
+    padding: 12px; /* Увеличиваем отступы */
+    border-radius: 25px; /* Скругление углов */
+  }
+
+  /* Для логотипа прижимаем его в угол */
+  .logoImage {
+    position: absolute; /* Прижимаем логотип к верхнему левому углу */
+    top: 1px;
+    left: 1px;
+    height: 25px; /* Уменьшаем размер логотипа */
+  }
+
+  /* Ссылки в навигации */
+  .nav {
+    position: absolute; /* Переносим навигацию в угол */
+    top: 1px;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 12px; /* Уменьшаем шрифт для мобильных */
+  }
+
+  /* Убираем избыточные отступы для навигации */
+  .nav a{
+    margin-left: 10; /* Убираем margin слева */
+    color: inherit
+  }
+}
