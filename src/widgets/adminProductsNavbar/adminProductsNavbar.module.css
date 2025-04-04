@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .navLink {
+    max-width: 90px;
+    margin: 5px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .navLink:hover {
+    background: #ee4779;
+    color: aliceblue;
+  }
+  
+  .active {
+    background: #ee4779;
+    color: white;
+  }
+  

@@ -1,0 +1,15 @@
+
+
+@media (max-width: 768px) {
+  .basketList {
+    margin-left: 0;
+    gap: 8px;
+    align-items: center;
+    width: 65%;
+  }
+
+  .basketList > div {
+    min-height: 100px;
+    width: 110%; /* На мобильных устройствах делаем ширину 100% */
+  }
+}

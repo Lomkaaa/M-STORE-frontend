@@ -1,0 +1,1 @@
+export {EditProfileModal } from "@/features/edit-profile/ui/EditProfileModal";

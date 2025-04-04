@@ -1,0 +1,15 @@
+.basketContainer {
+    padding: 20px;
+    margin-top: 10px;
+    border: solid 1px rgb(210, 209, 209);
+    border-radius: 20px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+.home {
+    margin-bottom: 10%;
+    width: 100px;
+}

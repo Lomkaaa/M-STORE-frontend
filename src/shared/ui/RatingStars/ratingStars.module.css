@@ -1,0 +1,14 @@
+.ratingInput {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .ratingInput svg {
+    cursor: pointer;
+    transition: color 0.3s ease; /* Добавляем плавный переход */
+  }
+  
+  /* Стиль для наведения на каждую звезду */
+  .ratingInput svg:hover {
+    color: gold;
+  }

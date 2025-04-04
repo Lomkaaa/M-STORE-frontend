@@ -10,7 +10,7 @@ type AuthResponse = {
   token: string;
 }
 
-type RegisterCredentials = {
+ export type RegisterCredentials = {
   password: string;
   email: string;
 }
@@ -23,7 +23,7 @@ export const loginUser = async (credentials: LoginCredentials): Promise<AuthResp
   };
   
   
-  // Функция для регистрации
+
 export const registerUser = async (credentials: RegisterCredentials): Promise<AuthResponse> => {
     const { data } = await api.post("/api/register", credentials);
     return data;

@@ -5,6 +5,7 @@ import { registerUser,loginUser } from "@/features/auth/api/authApi"
 
 export const useRegister = () => {
     return useMutation({
+      mutationKey:["register"],
       mutationFn: registerUser, 
     });
   };
@@ -12,6 +13,7 @@ export const useRegister = () => {
 
 export const useLogin = () => {
     return useMutation({
+      mutationKey:["login"],
       mutationFn: loginUser, 
     });
   };

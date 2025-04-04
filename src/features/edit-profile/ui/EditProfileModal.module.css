@@ -1,0 +1,263 @@
+/* EditProfileModal.module.css */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.inputGroup {
+  margin-bottom: 15px;
+}
+.inputGroup input {
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px solid #ccc;
+  width: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:large;
+  color: #3c3c3c;
+}
+
+
+.buttonGroup {
+  display: flex;       
+  justify-content: space-between; 
+  width: 100%;         
+}
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordToggle {
+  font-size: 30px; /* Размер иконки */
+  position: absolute;
+  left: 90%;
+  top: 60%;
+  transform: translate(-50%, -50%); /* Центрирование иконки */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #3c3c3c;
+  height: 40px; /* Задаём фиксированную высоту */
+  width: 40px;  /* Задаём фиксированную ширину */
+  padding: 0; /* Убираем любые отступы */
+  outline: none; /* Убираем стандартное обрамление */
+}
+.closeButton,
+.submitButton {
+  flex: 1;              
+  padding: 10px;
+  text-align: center;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(117, 117, 117);
+  color: #f5f5f5;
+  margin: 2px;;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.closeButton:hover,
+.submitButton:hover {
+ background-color: #9e9c9c;
+}
+
+
+
+
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatarPreview {
+  position: relative;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.removeAvatar {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.uploadPlaceholder {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+
+.fileInput {
+  display: none;
+}
+
+.customFileButton {
+  background-color: #3c3c3c;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.customFileButton:hover {
+  background-color: rgb(86, 81, 81);
+}
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Увеличенный аватар */
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #9e9c9c;
+}
+
+
+.removeAvatar {
+  position: absolute;
+  top: 65%;
+  right: -5px;
+  background: rgb(234, 78, 78);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.removeAvatar:hover {
+  background: rgb(122, 121, 121);
+}
+.errorMessage {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: brown;
+  text-align: center;
+  font-size: 20px;
+  animation: shake 0.5s ease-in-out 2; /* Анимация дергания длится 2 секунды и выполняется один раз */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5px); 
+  }
+  25% {
+    transform: translateX(5px);  
+  }
+  50% {
+    transform: translateX(-5px); 
+  }
+  75% {
+    transform: translateX(5px);  
+  }
+  100% {
+    transform: translateX(0);    
+  }
+}
+
+@media(max-width: 768px){
+  .modal {
+    width: 80%; /* Сужаем ширину на мобильных устройствах */
+    height: auto; /* Высота подстраивается под контент */
+    max-width: 100%; /* Окно может быть до 100% ширины экрана */
+    margin: 0; /* Убираем отступы на маленьких экранах */
+    padding: 10px;
+    margin-bottom: 30%;
+  }
+
+  .inputGroup input {
+    font-size: 13px; /* Уменьшаем шрифт на мобильных */
+    margin: 0;
+  }
+
+  .passwordToggle {
+    font-size: 29px; /* Уменьшаем размер иконки */
+  }
+
+  .avatar {
+    padding: 0px;
+    margin: 0px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .removeAvatar {
+    font-size: 8px; /* Уменьшаем размер кнопки удаления */
+    width: 24px;
+    height: 24px;
+  }
+
+  .customFileButton {
+    font-size: 10px; /* Уменьшаем размер кнопки для загрузки */
+  }
+
+  /* Уменьшаем размер шрифта для кнопок */
+  .closeButton, .submitButton {
+    font-size: 10px;
+    padding: 10px;
+  }
+}

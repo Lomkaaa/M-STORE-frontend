@@ -1,0 +1,277 @@
+.menuDropdown {
+  position: absolute;
+  top: 22%;
+  left: 3.7%;
+  width: 30%;
+  background-color: white;
+  box-shadow: 2px 2px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Уменьшаем отступы для более компактного меню */
+  z-index: 10;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.menuButton {
+  max-width: 120px;
+  color: #ef2c67;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  padding: 10px 15px;
+  border: 2px solid #ef2c67;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.menuButton:hover {
+  background-color: #ef2c67;
+  color: white;
+}
+
+.menuButton:active {
+  transform: scale(0.98);
+}
+
+
+.menuDropdown > *:not(:last-child) {
+  margin-bottom: 10px; 
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 5px; 
+  margin-top: 5px; 
+}
+
+.menuItem {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 8px 16px; /* Уменьшаем отступы внутри элементов */
+  border: 1px solid #ddd;
+  margin: 2px; /* Уменьшаем отступы между элементами */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px; /* Уменьшаем размер шрифта */
+  width: 100%; /* Убираем фиксированную ширину */
+}
+
+.menuItem:hover {
+  background-color: #ddd;
+}
+
+.selected {
+  background-color: #282526;
+  color: white;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+.priceInput {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease; /* Плавный переход при фокусе */
+  width: 100%;
+}
+
+.priceInput:focus {
+  outline: none;
+  border-color: #101010;
+  box-shadow: 0 0 5px rgba(6, 6, 6, 0.3); /* Подсветка при фокусе */
+}
+
+.priceInput::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.priceInput:hover {
+  border-color: #ccc;
+}
+
+.selected:hover {
+  background-color: #171b18;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.checkboxCustom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ef2c67;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.checkboxInput:checked + .checkboxCustom {
+  background-color: #ef2c67;
+  border-color: #ef2c67;
+}
+
+.checkboxCustom::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.checkboxInput:checked + .checkboxCustom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.sortOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  
+}
+.applyButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.applyButton {
+  width: 50%;
+  height: 40px;
+  font-size: 18px;
+  background-color: #393939;
+  color: white;
+  padding:px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.applyButton:hover {
+  background-color: #727572;
+}
+
+.sortLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.sortSelect {
+  width: 95%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: #ef2c67;
+  box-shadow: 0 0 5px rgba(239, 44, 103, 0.3);
+}
+
+.sortSelect:hover {
+  border-color: #ccc;
+}
+@media (max-width: 1100px) {
+  .menuDropdown {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menuDropdown {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .menuButton {
+    font-size: 20px;
+    padding: 8px;
+    width: 50%;
+  }
+
+  .sortOptions select {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .applyButton {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuButton {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .menuDropdown {
+    width: 90%;
+    padding: 10px;
+    top: 100px;
+  }
+
+  .sortOptions select {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .applyButton {
+    padding: 8px;
+    font-size: 14px;
+    width: 50%;
+  }
+}
+
+
+
+
+
+
+
+

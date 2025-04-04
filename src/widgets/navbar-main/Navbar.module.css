@@ -1,0 +1,35 @@
+.navbar {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .link {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight:600;
+    cursor: pointer;
+    color: black;
+  }
+  .link:hover {
+    color: #b2adad;
+  }
+  @media (max-width: 768px) {
+    .links {
+        gap: 10px;
+      }
+      .link {
+        font-size: 15px;
+      }
+}
+
+
+

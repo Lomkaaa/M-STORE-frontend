@@ -1,0 +1,98 @@
+.reviewsSection {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reviewsSection h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .reviewsSection h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .reviewsSection .reviewItem {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    line-height: 1.5; 
+    font-size: 12px;
+    list-style-type: none;
+  }
+  
+  .reviewsSection .reviewItem p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .reviewsSection .reviewItem p strong {
+    font-weight: bold;
+  }
+  
+  .reviewsSection .ratingInput {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .reviewsSection textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .reviewsSection button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reviewsSection button:hover {
+    background-color: #45a049;
+  }
+  
+  .reviewsSection button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .avatar {
+    margin-top: 10px;
+    width: 40px; /* Размер аватара */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .reviewHeader {
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px;
+    margin-bottom: 2px;
+  }
+
+  .showMoreBtn {
+    font-size: 14px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  

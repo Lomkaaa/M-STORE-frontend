@@ -12,22 +12,62 @@
 .nav {
   display: flex;
   gap: 30px;
-  
 }
 .nav a {
   color: inherit
 }
+.badge {
+  position: absolute;
+  top:-18px;
+  right: -8px;
+  background-color: rgba(0, 0, 0, 0.693);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-
+}
+.cartWrapper {
+  position: relative;
+  display: inline-block;
+}
 /* Логотип */
 .logoImage {
   height: 80px;
   width: auto;
   transition: height 0.3s ease; /* Плавное изменение размера */
 }
-
+.icon {
+  font-size: 22px; /* Делаем иконки больше */
+  margin-right: 5px;
+  vertical-align: middle; /* Выравнивание с текстом */
+  color:#fc3f71
+}
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  font-size: 20px;
+  color: #fc3f71;
+}
 /* Поле поиска */
 .search {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(52, 51, 50);
   height: 30px; 
   width: 100%;
   max-width: 350px; 
@@ -36,7 +76,9 @@
   border-radius: 20px; 
   outline: none;
   transition: all 0.3s ease-in-out;
-  font-size: 16px;
+  font-size: 17px;
+  background-color: #e1dede;
+  padding-left:12%;
 }
 
 /* Эффект при фокусе */
@@ -48,6 +90,7 @@
 /* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
   .header {
+    margin-top: 13px;
     flex-direction: column; /* Изменяем направление на колонку, чтобы элементы выстраивались вертикально */
     gap: 10px; /* Меньший промежуток между элементами */
   }
@@ -60,17 +103,18 @@
   /* Поиск на мобильных */
   .search {
     margin-top: 10px;
-    height: 20px; /* Увеличиваем высоту поля поиска */
+    height: 40px; /* Увеличиваем высоту поля поиска */
     max-width: 100%; /* Поиск растягивается на всю ширину экрана */
     font-size: 18px; /* Увеличиваем шрифт */
-    padding: 12px; /* Увеличиваем отступы */
+    /* Увеличиваем отступы */
+    padding-left:12%;
     border-radius: 25px; /* Скругление углов */
   }
 
   /* Для логотипа прижимаем его в угол */
   .logoImage {
     position: absolute; /* Прижимаем логотип к верхнему левому углу */
-    top: 1px;
+    top: 2px;
     left: 1px;
     height: 25px; /* Уменьшаем размер логотипа */
   }
@@ -89,5 +133,15 @@
   .nav a{
     margin-left: 10; /* Убираем margin слева */
     color: inherit
+  }
+  .searchContainer {
+    width: 100%;
+  }
+  .searchIcon {
+    font-size: 20px;
+    padding-top: 1px;
+  }
+  .icon {
+    font-size: 22px; /* Делаем иконки больше на мобилке */
   }
 }

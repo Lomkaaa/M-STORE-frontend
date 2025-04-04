@@ -1,8 +1,11 @@
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px; /* Максимальная ширина */
   margin: 0 auto;
   padding: 0 20px; /* Боковые отступы */
+  min-height: 100vh;
 }
 
 /* Контент с отступами сверху и снизу */
@@ -22,7 +25,3 @@
 }
 
 
-button {
-  width: 100%; /* Кнопки растягиваются на мобилках */
-  max-width: 300px; /* Ограничение ширины */
-}

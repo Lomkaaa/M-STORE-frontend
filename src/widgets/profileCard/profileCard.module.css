@@ -1,0 +1,184 @@
+/* Родительский контейнер для карточки профиля и блока со статусом */
+.cardWrapper {
+  display: flex;
+  justify-content: space-between; /* Разделяем карточку профиля и статус заказа */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  padding: 20px;
+  max-width: 1200px; /* Ограничиваем ширину */
+  margin: 0 auto; /* Центрируем */
+  background-color: #eef2f2;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+.orderStatusContainer {
+  display: flex;
+  max-width: 1000px;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  gap: 20px; /* Добавляем отступы между статусами */
+  width: 100%; /* Устанавливаем ширину контейнера */
+  margin-top: 10px; /* Отступ сверху */
+  justify-self: center;
+  align-items: center;
+}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Карточка профиля будет занимать 50% от ширины */
+  margin-right: 20px; /* Отступ от правого края */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+.avatar {
+  width: 190px; /* Размер аватарки */
+  height: 190px;
+  border-radius: 50%; /* Делаем её круглой */
+  overflow: hidden; /* Обрезаем края */
+  border: 3px solid #ccc; /* Тонкая рамка для красоты */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезает изображение, чтобы оно заполняло круг */
+}
+
+/* Стиль для блока с аватаром */
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Стиль для кнопки загрузки фото */
+.uploadButton {
+  margin-top: 10px;
+  background-color: #656665;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.uploadButton:hover {
+  background-color: #45a049;
+}
+
+/* Информация о пользователе */
+.info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.infoLabel {
+  font-weight: bold;
+  color: #555;
+}
+
+.infoValue {
+  color: #5c5b5b;
+  font-size: 14px;
+}
+
+/* Баланс */
+.balanceSection {
+  text-align: center;
+}
+
+/* Секция редактирования */
+.editSection {
+  text-align: center;
+}
+/* Блок статус заказа */
+.orderStatusWrapper {
+  width: 28%; /* Статус заказа занимает 28% от ширины */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  position: relative;
+}
+
+/* Стили кнопки заказа */
+.buttonProfile {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonProfile:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 1024px) {
+  .card {
+    width: 50%; /* На устройствах с экраном меньше 1024px карточка будет занимать 100% */
+    margin-right: 0; /* Убираем отступ справа */
+  }
+
+  .orderStatusWrapper {
+    width: 50%; /* Статус заказа также займет всю ширину */
+    margin-left: 0;
+    margin-top: 10px; /* Отступ сверху */
+  }
+
+  .cardWrapper {
+    flex-direction: column; /* На мобильных устройствах карточка и статус заказа будут располагаться по вертикали */
+    align-items: center; /* Центрируем элементы */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%; /* На устройствах с экраном меньше 768px карточка будет занимать 100% */
+    margin-right: 0;
+    margin-top: 0px; /* Отступ сверху */
+    font-size: 20px;
+  }
+
+  .orderStatusWrapper {
+    width: 70%; /* Статус заказа также займет всю ширину */
+    margin-left: 1px;
+    /* Отступ сверху */
+  }
+
+  .cardWrapper {
+    flex-direction: column; /* Элементы будут располагаться по вертикали */
+    align-items: center; /* Центрируем элементы */
+  }
+}
+
+.historyButton {
+  display: block;
+  padding: 10px 10px;
+  background-color: #303030;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.historyButton:hover {
+  background-color: #606060;
+}

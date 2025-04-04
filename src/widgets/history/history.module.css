@@ -1,0 +1,76 @@
+.historyContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .orderItem {
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orderId {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    text-align: end;
+  }
+  
+  .historyItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .historyItem img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .historyItem div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .historyItem p {
+    font-size: 14px;
+    margin: 2px 0;
+    color: #333;
+  }
+  
+  .historyItem p:last-child {
+    font-weight: bold;
+    color: #357430;
+  }
+  
+  .loadingSpinner {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .backButton {
+    margin-bottom: 20px;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }

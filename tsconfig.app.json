@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "vite-env.d.ts"]
+  "include": ["src", "vite-env.d.ts", "src/features/edit-profile/model", "src/features/edit-profile/ui", "src/features/edit-profile/index.ts"]
 }

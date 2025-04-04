@@ -1,0 +1,22 @@
+.backButton {
+    width: 100px;
+    margin: 10px;
+    background-color: rgb(74, 75, 75);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backButton:hover {
+    background-color: rgb(94, 95, 95);
+}
+
+.backButton:active {
+    background-color: rgb(54, 55, 55);
+    transform: scale(0.95);
+}

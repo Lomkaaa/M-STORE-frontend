@@ -1,0 +1,89 @@
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.cartWrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+.orderButton, .clearButton {
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.orderButton {
+    background: rgb(97, 97, 97);
+    color: white;
+}
+
+.orderButton:hover {
+    background: rgb(48, 48, 48);
+}
+
+.clearButton {
+    background: #f66b6b;
+}
+
+.clearButton:hover {
+    background: #ff3535;
+}
+
+/* Добавляем черту под кнопками */
+
+.price {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 10px;
+        flex-direction: column; /* Столбиком на мобилке */
+        gap: 1px;
+        padding: 1%;
+    }
+    .orderButton, .clearButton {
+        margin: 5px;
+        width: 80%;
+        max-width: 200px;
+        color: aliceblue;
+    }
+
+    .price {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
