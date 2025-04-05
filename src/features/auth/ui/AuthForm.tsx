@@ -6,7 +6,7 @@ import { login } from "@/entities/auth/model/authSlice";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import styles from "./AuthForm.module.css";
+import styles from "./authForm.module.css";
 import { RegisterCredentials } from "../api/authApi";
 
 

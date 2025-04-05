@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useUpdateBalance } from "../model/useUpdateBalance";
-import styles from "./ProfileBalance.module.css";
+import styles from "./profileBalance.module.css";
 import { FaCreditCard, FaMoneyBillWave } from "react-icons/fa";
 
 export const ProfileBalance = ({ currentBalance }: { currentBalance: number }) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { ProductList} from "@/widgets/list-product/ProductList"; // Список товаров
 
-import styles from "./Home.module.css";
+import styles from "./home.module.css";
 import { Navbar } from "@/widgets/navbar-main/Navbar";
 
 const Home: React.FC = () => {

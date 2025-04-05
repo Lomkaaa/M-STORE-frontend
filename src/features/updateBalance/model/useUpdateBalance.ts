@@ -6,7 +6,7 @@ export const useUpdateBalance = () => {
 
   return useMutation({
     mutationFn: updateBalance,
-    onSuccess: (data) => {
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["user"] }); 
     },
   });
